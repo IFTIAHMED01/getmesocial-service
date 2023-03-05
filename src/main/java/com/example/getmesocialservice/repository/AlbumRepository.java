@@ -17,7 +17,21 @@ public class AlbumRepository {
     }
 
     public Album saveAlbum(Album album) {
+        album.setAlbumId(albumList.size() + 1);
       albumList.add(album);
       return album;
+    }
+
+    public List<Album> getAllAlbums() {
+        return albumList;
+    }
+
+    public Album getAlbumById(int albumId) {
+        for(Album album:albumList){
+            if(album.getAlbumId() == albumId){
+                return album;
+            }
+        }
+        return null;
     }
 }
