@@ -14,4 +14,8 @@ public class AlbumService {
     public Album getAlbum(){
        return albumRepository.getAlbum();
     }
+
+    public Album saveAlbum(Album album){
+        return albumRepository.saveAlbum(album);
+    }
 }
