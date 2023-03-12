@@ -1,13 +1,13 @@
 package com.example.getmesocialservice.model;
 
-public class photo {
+public class Photo {
     private int id;
     private int albumId;
     private String photoUrl;
     private String createdBy;
     private String dataCreated;
 
-    public photo(int id, int albumId, String photoUrl, String createdBy, String dataCreated) {
+    public Photo(int id, int albumId, String photoUrl, String createdBy, String dataCreated) {
         this.id = id;
         this.albumId = albumId;
         this.photoUrl = photoUrl;

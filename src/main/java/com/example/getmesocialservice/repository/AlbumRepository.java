@@ -12,12 +12,12 @@ public class AlbumRepository {
     List<Album> albumList = new ArrayList();
 
     public Album getAlbum(){
-        Album album = new Album(1234, "IFTI", "artistic", "www.getmehired.com");
+        Album album = new Album(1234, "IFTI", "artistic", "www.getmehired.com","2023/01/12");
         return album;
     }
 
     public Album saveAlbum(Album album) {
-        album.setAlbumId(albumList.size() + 1);
+        album.setId(albumList.size() + 1);
       albumList.add(album);
       return album;
     }
@@ -28,7 +28,7 @@ public class AlbumRepository {
 
     public Album getAlbumById(int albumId) {
         for(Album album:albumList){
-            if(album.getAlbumId() == albumId){
+            if(album.getId() == albumId){
                 return album;
             }
         }
@@ -37,10 +37,11 @@ public class AlbumRepository {
 
     public Album updateAlbum(int albumId, Album album) {
         for(Album a:albumList){
-            if(a.getAlbumId() == albumId){
+            if(a.getId() == albumId){
                 a.setName(album.getName());
-                a.setDescription(album.getDescription());
-                a.setCoverPicUrl(album.getCoverPicUrl());
+                a.setCoverPhotoUrl(album.getCoverPhotoUrl());
+                a.setCreatedBy(album.getCreatedBy());
+                a.setDataCreated(album.getDataCreated());
                 return a;
             }
         }
@@ -50,7 +51,7 @@ public class AlbumRepository {
     public Album deleteAlbum(int albumId) {
         Album deletedAlbum = null;
         for(Album a:albumList){
-            if(a.getAlbumId() == albumId){
+            if(a.getId() == albumId){
                 deletedAlbum = a;
                 albumList.remove(a);
             }

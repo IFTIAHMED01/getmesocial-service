@@ -1,24 +1,26 @@
 package com.example.getmesocialservice.model;
 
 public class Album {
-    private int albumId;
+    private int id;
     private String name;
-    private String description;
-    private String coverPicUrl;
+    private String coverPhotoUrl;
+    private String createdBy;
+    private String dataCreated;
 
-    public Album(int albumId, String name, String description, String coverPicUrl) {
-        this.albumId = albumId;
+    public Album(int id, String name, String coverPhotoUrl, String createdBy, String dataCreated) {
+        this.id = id;
         this.name = name;
-        this.description = description;
-        this.coverPicUrl = coverPicUrl;
+        this.coverPhotoUrl = coverPhotoUrl;
+        this.createdBy = createdBy;
+        this.dataCreated = dataCreated;
     }
 
-    public int getAlbumId() {
-        return albumId;
+    public int getId() {
+        return id;
     }
 
-    public void setAlbumId(int albumId) {
-        this.albumId = albumId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -29,19 +31,27 @@ public class Album {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getCoverPhotoUrl() {
+        return coverPhotoUrl;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setCoverPhotoUrl(String coverPhotoUrl) {
+        this.coverPhotoUrl = coverPhotoUrl;
     }
 
-    public String getCoverPicUrl() {
-        return coverPicUrl;
+    public String getCreatedBy() {
+        return createdBy;
     }
 
-    public void setCoverPicUrl(String coverPicUrl) {
-        this.coverPicUrl = coverPicUrl;
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public String getDataCreated() {
+        return dataCreated;
+    }
+
+    public void setDataCreated(String dataCreated) {
+        this.dataCreated = dataCreated;
     }
 }
