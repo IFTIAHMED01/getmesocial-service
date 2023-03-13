@@ -1,9 +1,14 @@
 package com.example.getmesocialservice.model;
 
+import com.example.getmesocialservice.validation.ValidName;
+import org.hibernate.validator.constraints.Length;
+
 public class Album {
     private int id;
+    @Length(max = 10)
     private String name;
     private String coverPhotoUrl;
+    @ValidName
     private String createdBy;
     private String dataCreated;
 

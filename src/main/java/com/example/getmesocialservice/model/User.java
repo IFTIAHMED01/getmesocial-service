@@ -1,9 +1,15 @@
 package com.example.getmesocialservice.model;
 
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotEmpty;
+
 public class User {
     private int id;
     private String name;
+    @Length(min = 2)
     private String email;
+    @NotEmpty
     private String profilePhotoUrl;
 
     public User(int id, String name, String email, String profilePhotoUrl) {

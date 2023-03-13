@@ -1,9 +1,14 @@
 package com.example.getmesocialservice.model;
 
+import com.example.getmesocialservice.validation.ValidName;
+import org.hibernate.validator.constraints.Length;
+
 public class Comment {
     private int id;
     private int photoId;
+    @Length(min = 5)
     private String message;
+    @ValidName
     private String createdBy;
     private String dataCreated;
 

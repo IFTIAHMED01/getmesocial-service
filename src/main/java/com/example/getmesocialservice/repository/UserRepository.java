@@ -57,4 +57,13 @@ public class UserRepository {
         }
         return deletedUser;
     }
+
+    public List<User> getByName(String name) {
+        for(User user:userList){
+            if(user.getName() == name) {
+                return userList;
+            }
+        }
+        return null;
+    }
 }
